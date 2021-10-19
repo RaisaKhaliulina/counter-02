@@ -23,6 +23,10 @@ const Counter = () => {
     const handleIncrement = () => {
         setCount(count+1)
     }
+    const handleDecrement = () => {
+        count < 1 ? setCount(count):
+        setCount(count-1)
+    }
     return ( 
       <>
         {tags.length ===0 && "Теги не найдены"}
@@ -31,8 +35,13 @@ const Counter = () => {
         <span className={getBageclasses()}>{formCount()}</span> 
         <button 
           onClick={handleIncrement}
-          className="btn btn-secondary btn-sm">
+          className="btn btn-secondary btn-sm m-2">
           Increment
+        </button>
+        <button
+          onClick={handleDecrement}
+          className="btn btn-secondary  btn-sm">
+          Decrement    
         </button>
       </>
     );
