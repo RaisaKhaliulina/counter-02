@@ -4,7 +4,6 @@ const Counter = () => {
 
     const[count, setCount]=useState(0)
     const tags = ["tag1","tag2","tag3"]
-    const[imajeUrl, setImajeurl] = useState("https://picsum.photos/200");
 
     const formCount = () => {
         return count ===0 ? "Ноль" : count
@@ -31,7 +30,7 @@ const Counter = () => {
       <>
         {tags.length ===0 && "Теги не найдены"}
         {renderTags()}
-        <img src={imajeUrl} alt=""/>
+        
         <span className={getBageclasses()}>{formCount()}</span> 
         <button 
           onClick={handleIncrement}
